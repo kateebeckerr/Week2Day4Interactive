@@ -1,0 +1,89 @@
+---
+title: "Week2Day4interactive"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+```
+
+# Interactive Session 1
+
+## Functions
+
+```{r}
+#verb then descriptor with arguments you want to expect
+double_value <- function( my_dollars) {
+  print(2 * my_dollars)
+}
+
+double_value(my_dollars = 10.13)
+```
+
+```{r}
+double_value(10.13)
+```
+
+```{r}
+#giving argument and R doesnt know what it is 
+double_value(my_dollars = 10.13, 5)
+```
+
+```{r}
+monthly_income <- c(42.50, 61.75, 89.50)
+
+double_value(monthly_income)
+```
+
+```{r}
+double_value2 <- function(dollars) {
+  dollars * 2
+}
+#print is only show me this nothing stored, return statement is store this so i can use this later
+double_value2(dollars =10) * 0.08
+```
+
+```{r}
+#stores it
+tax_double <- double_value2(dollars =10) * 0.08
+```
+
+### Create a function that returns an awesome restaurant name given a cool animal and your favorite food 
+
+```{r}
+#descriptive verb and non verb, animal and food are arguments, value into single string and printed 
+name_restaraunt <- function(animal, food) {
+  print(paste0(animal, food))
+}
+#if wanna use again create a function 
+name_restaraunt(animal = "hawk", food = "pizza")
+
+```
+
+## given temperature in degrees Fahrenheit write a function that converts it to celsius 
+
+```{r}
+
+convert_celsius <- function(f_temp, c_temp) {
+  print((f_temp - 32) * (5 / 9))
+}
+```
+
+```{r}
+convert_celsius(f_temp =52)
+```
+
+## Create a function given inputs age and home town returns I am this many years old and I'm from this home town
+
+```{r}
+return_agehome <- function(age, hometown) {
+  print(paste("I am", age, "years old and I'm from", hometown,"."))
+}
+
+return_agehome(age = 6, hometown = "Los Angeles")
+```
+
+```{r}
+
+```
