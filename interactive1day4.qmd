@@ -49,7 +49,7 @@ double_value2(dollars =10) * 0.08
 tax_double <- double_value2(dollars =10) * 0.08
 ```
 
-### Create a function that returns an awesome restaurant name given a cool animal and your favorite food 
+### Create a function that returns an awesome restaurant name given a cool animal and your favorite food
 
 ```{r}
 #descriptive verb and non verb, animal and food are arguments, value into single string and printed 
@@ -61,7 +61,7 @@ name_restaraunt(animal = "hawk", food = "pizza")
 
 ```
 
-## given temperature in degrees Fahrenheit write a function that converts it to celsius 
+## given temperature in degrees Fahrenheit write a function that converts it to celsius
 
 ```{r}
 
@@ -81,9 +81,10 @@ return_agehome <- function(age, hometown) {
   print(paste("I am", age, "years old and I'm from", hometown,"."))
 }
 
-return_agehome(age = 6, hometown = "Los Angeles")
+return_agehome(age = 6, hometown = "Los Angeles")git chec
 ```
 
 ```{r}
+
 
 ```
