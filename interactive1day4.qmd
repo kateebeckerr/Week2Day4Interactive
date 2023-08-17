@@ -84,7 +84,66 @@ return_agehome <- function(age, hometown) {
 return_agehome(age = 6, hometown = "Los Angeles")git chec
 ```
 
+## More functions 
+
+creating a subset within a function, return something based on that subset, dataframe of dogs favorite food
+
 ```{r}
+#2 columns
+dog_choice <- data.frame(dog_name = c("khora", "teddy", "waffle", "banjo", "tally"),
+                         food = c("everything", "salmon", "pancakes", "chicken", "enchilladas"))
+
+#function pulling info from that, duer gives function a dog name should return the string this dogs favorite food is 
 
 
 ```
+
+```{r}
+#subset only including dog name user puts in , only incldue dog names matches string wher einput user inputs dog name
+dog_menu <- function(enter_dog_name) {
+  my_subset <- filter(dog_choice, dog_name == enter_dog_name) #if dog name is banjo only thing kept is banjo with his info
+  print(paste("My name is", my_subset$dog_name, "and my favorite food is",
+              my_subset$food))
+}
+
+#my_subset only keep row and dog choice if, person enters khora filter job looks through all rows and if condition is met azdn returns true row is kept and if not row is excluded 
+#given enter_dog_name first use subset that only stores row for that subset would only return waffle, pull info from existing row in subset
+```
+
+```{r}
+#filtering dataframe eto single row
+dog_menu(enter_dog_name = "waffle")
+
+```
+
+```{r}
+#beside waffle, banjo.... get error message 
+
+```
+
+## Function that contains a for loop 
+
+\[\] dataframe with column anes
+
+```{r}
+#function with any dataframe if all variables are numeric tell me all the means, fucntion tierates over all columnsa dn calcualtes mean values stores them and then prints output of mean value in statement mean value in this column name is this, create iteration
+
+dataframe_means <- function(df) {
+  for (i in seq_along(df)) {
+    col_mean <- mean(df[[i]], na.rm = TRUE)
+    column_name <- colnames(df[i])
+    print(paste("The mean value of", column_name, "is", col_mean))
+  } #one to wahtever numebr of columns in dataframe  [[]] jsut for vector of values gives vector of values in column from some df we feed it , for each column calculate mean value for mean values and accessing column name for each column im on, jsut makinga. function nto giving it a real data set just using it so ou can place a name
+}
+```
+
+```{r}
+dataframe_means(df = mtcars) #now can use this function nforn any dataframe 
+```
+
+```{r}
+dataframe_means(faithful)
+#can use for any dataframe!!!!
+```
+
+## Error messages 
