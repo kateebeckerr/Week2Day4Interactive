@@ -84,6 +84,50 @@ return_agehome <- function(age, hometown) {
 return_agehome(age = 6, hometown = "Los Angeles")
 ```
 
-```{r}
+## Function with conditionals 
 
+-   saves will now be in new branch made
+
+```{r}
+#age you calcualte will be absaed on animal 
+calculate_animal_age <- function(species, age_human)
+  if (species == "dog") {
+    age_human * 7
+  } else if (species == "goat") {
+    age_human *4.7
+    } else {
+      print("Please enter dog or goat") #if none of other things happen do this 
+  }
+
+  
+```
+
+```{r}
+calculate_animal_age(species = "dog", age_human * 10)
+
+calcualte_animal_age(species = "goat", age_human = 4)
+
+calculate_animal_age(species == "whale", age_human = 10)
+#nothing happens, no errors, ifs statemenet arent evaluated because they dont go through condition to be evaluated 
+
+```
+
+## write a function that will return that given temperature in kelvin if a user selects "metric" to the scale then return degrees Celsius, or if they select "english" then return degrees in Fahrenheit 
+
+```{r}
+#use two arguments, input of temp in kelvin, two is user selection of metric or english based on selected return someething different
+
+return_degrees <- function(scale, temp_k) {
+  if(scale == "metric") {
+    temp_k - 273.15
+  } else if(scale == "english") {
+    print(((temp_k - 273.15) * 1.8) + 32)
+  }
+
+
+
+```
+
+```{r}
+my_value = convert_kelvin(scale = "metric", temp_k = 40)
 ```
