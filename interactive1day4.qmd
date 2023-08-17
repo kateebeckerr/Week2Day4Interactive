@@ -84,7 +84,7 @@ return_agehome <- function(age, hometown) {
 return_agehome(age = 6, hometown = "Los Angeles")git chec
 ```
 
-## More functions 
+## More functions
 
 creating a subset within a function, return something based on that subset, dataframe of dogs favorite food
 
@@ -121,7 +121,7 @@ dog_menu(enter_dog_name = "waffle")
 
 ```
 
-## Function that contains a for loop 
+## Function that contains a for loop
 
 \[\] dataframe with column anes
 
@@ -146,4 +146,44 @@ dataframe_means(faithful)
 #can use for any dataframe!!!!
 ```
 
-## Error messages 
+## Error messages
+
+Create function to calculate betz limit
+
+modor radius: meters
+
+air density: kg/m\^3
+
+power: watts
+
+```{r}
+calculate_betz_windpower <- function(air_density, rotor_radius, wind_velocity) {
+  
+  if (wind_velocity > 130) {
+    warning("Whoa, thats a pretty high windspeed. Are you sure?") 
+  }
+  if(rotor_radius < 0) {
+    stop("rotor radius must be a positive value (meters)")
+  }
+  0.3 * air_density * pi * ((rotor_radius)^2) * ((wind_velocity)^3)
+}
+
+```
+
+```{r}
+calculate_betz_windpower(air_density = 1.2, rotor_radius = 30, wind_velocity = 50)
+```
+
+```{r}
+calculate_betz_windpower(air_density = 1, rotor_radius = 20, wind_velocity = 1020)
+
+```
+
+```{r}
+calculate_betz_windpower(air_density = 1, rotor_radius = -10, wind_velocity = 1020)
+
+```
+
+```{r}
+
+```
